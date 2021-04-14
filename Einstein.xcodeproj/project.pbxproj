@@ -11,6 +11,7 @@
 		C50617502626B0A40089EC8E /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = C506174F2626B0A40089EC8E /* README.md */; };
 		C50617562626B1E20089EC8E /* MMSwiftToolbox in Frameworks */ = {isa = PBXBuildFile; productRef = C50617552626B1E20089EC8E /* MMSwiftToolbox */; };
 		C506175A2626B2560089EC8E /* SwiftyBeaver in Frameworks */ = {isa = PBXBuildFile; productRef = C50617592626B2560089EC8E /* SwiftyBeaver */; };
+		C506176E2626B2900089EC8E /* Logging.swift in Sources */ = {isa = PBXBuildFile; fileRef = C506176D2626B2900089EC8E /* Logging.swift */; };
 		C59C97C92626AB20006224D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59C97C82626AB20006224D4 /* AppDelegate.swift */; };
 		C59C97CB2626AB20006224D4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59C97CA2626AB20006224D4 /* ViewController.swift */; };
 		C59C97CD2626AB20006224D4 /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59C97CC2626AB20006224D4 /* Document.swift */; };
@@ -20,6 +21,7 @@
 
 /* Begin PBXFileReference section */
 		C506174F2626B0A40089EC8E /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		C506176D2626B2900089EC8E /* Logging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logging.swift; sourceTree = "<group>"; };
 		C59C97C52626AB20006224D4 /* Einstein.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Einstein.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C59C97C82626AB20006224D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C59C97CA2626AB20006224D4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -67,6 +69,7 @@
 				C59C97C82626AB20006224D4 /* AppDelegate.swift */,
 				C59C97CA2626AB20006224D4 /* ViewController.swift */,
 				C59C97CC2626AB20006224D4 /* Document.swift */,
+				C506176D2626B2900089EC8E /* Logging.swift */,
 				C59C97CE2626AB20006224D4 /* Assets.xcassets */,
 				C59C97D02626AB20006224D4 /* Main.storyboard */,
 				C59C97D32626AB20006224D4 /* Info.plist */,
@@ -158,6 +161,7 @@
 				C59C97CB2626AB20006224D4 /* ViewController.swift in Sources */,
 				C59C97C92626AB20006224D4 /* AppDelegate.swift in Sources */,
 				C59C97CD2626AB20006224D4 /* Document.swift in Sources */,
+				C506176E2626B2900089EC8E /* Logging.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
