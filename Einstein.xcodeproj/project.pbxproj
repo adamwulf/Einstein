@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C506174D2626B0190089EC8E /* SwiftTex in Frameworks */ = {isa = PBXBuildFile; productRef = C506174C2626B0190089EC8E /* SwiftTex */; };
 		C59C97C92626AB20006224D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59C97C82626AB20006224D4 /* AppDelegate.swift */; };
 		C59C97CB2626AB20006224D4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59C97CA2626AB20006224D4 /* ViewController.swift */; };
 		C59C97CD2626AB20006224D4 /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59C97CC2626AB20006224D4 /* Document.swift */; };
@@ -30,6 +31,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C506174D2626B0190089EC8E /* SwiftTex in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,6 +84,9 @@
 			dependencies = (
 			);
 			name = Einstein;
+			packageProductDependencies = (
+				C506174C2626B0190089EC8E /* SwiftTex */,
+			);
 			productName = Einstein;
 			productReference = C59C97C52626AB20006224D4 /* Einstein.app */;
 			productType = "com.apple.product-type.application";
@@ -109,6 +114,9 @@
 				Base,
 			);
 			mainGroup = C59C97BC2626AB20006224D4;
+			packageReferences = (
+				C506174B2626B0190089EC8E /* XCRemoteSwiftPackageReference "SwiftTex" */,
+			);
 			productRefGroup = C59C97C62626AB20006224D4 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -334,6 +342,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C506174B2626B0190089EC8E /* XCRemoteSwiftPackageReference "SwiftTex" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/adamwulf/SwiftTex.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C506174C2626B0190089EC8E /* SwiftTex */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C506174B2626B0190089EC8E /* XCRemoteSwiftPackageReference "SwiftTex" */;
+			productName = SwiftTex;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C59C97BD2626AB20006224D4 /* Project object */;
 }

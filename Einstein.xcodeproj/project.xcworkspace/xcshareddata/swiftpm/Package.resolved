@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "SwiftTex",
+        "repositoryURL": "https://github.com/adamwulf/SwiftTex.git",
+        "state": {
+          "branch": "main",
+          "revision": "0f321a7c967661e4f0fbe592b3c4643ff246951b",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}
