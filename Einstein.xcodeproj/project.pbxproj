@@ -13,6 +13,10 @@
 		C506175A2626B2560089EC8E /* SwiftyBeaver in Frameworks */ = {isa = PBXBuildFile; productRef = C50617592626B2560089EC8E /* SwiftyBeaver */; };
 		C506176E2626B2900089EC8E /* Logging.swift in Sources */ = {isa = PBXBuildFile; fileRef = C506176D2626B2900089EC8E /* Logging.swift */; };
 		C50617722626BB3F0089EC8E /* Sourceful in Frameworks */ = {isa = PBXBuildFile; productRef = C50617712626BB3F0089EC8E /* Sourceful */; };
+		C50617832626BF4F0089EC8E /* DarkTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50617822626BF4F0089EC8E /* DarkTheme.swift */; };
+		C50617862626BF690089EC8E /* LightTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50617852626BF690089EC8E /* LightTheme.swift */; };
+		C506178B2626BFA40089EC8E /* LICENSE.md in Resources */ = {isa = PBXBuildFile; fileRef = C506178A2626BFA40089EC8E /* LICENSE.md */; };
+		C506178E2626C0200089EC8E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C506178D2626C0200089EC8E /* Constants.swift */; };
 		C59C97C92626AB20006224D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59C97C82626AB20006224D4 /* AppDelegate.swift */; };
 		C59C97CB2626AB20006224D4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59C97CA2626AB20006224D4 /* ViewController.swift */; };
 		C59C97CD2626AB20006224D4 /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59C97CC2626AB20006224D4 /* Document.swift */; };
@@ -23,6 +27,10 @@
 /* Begin PBXFileReference section */
 		C506174F2626B0A40089EC8E /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		C506176D2626B2900089EC8E /* Logging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logging.swift; sourceTree = "<group>"; };
+		C50617822626BF4F0089EC8E /* DarkTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarkTheme.swift; sourceTree = "<group>"; };
+		C50617852626BF690089EC8E /* LightTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightTheme.swift; sourceTree = "<group>"; };
+		C506178A2626BFA40089EC8E /* LICENSE.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
+		C506178D2626C0200089EC8E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		C59C97C52626AB20006224D4 /* Einstein.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Einstein.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C59C97C82626AB20006224D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C59C97CA2626AB20006224D4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -48,6 +56,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C50617812626BF460089EC8E /* Editor */ = {
+			isa = PBXGroup;
+			children = (
+				C50617822626BF4F0089EC8E /* DarkTheme.swift */,
+				C50617852626BF690089EC8E /* LightTheme.swift */,
+			);
+			path = Editor;
+			sourceTree = "<group>";
+		};
+		C50617882626BF740089EC8E /* Licenses */ = {
+			isa = PBXGroup;
+			children = (
+				C50617892626BF890089EC8E /* Unwrap */,
+			);
+			path = Licenses;
+			sourceTree = "<group>";
+		};
+		C50617892626BF890089EC8E /* Unwrap */ = {
+			isa = PBXGroup;
+			children = (
+				C506178A2626BFA40089EC8E /* LICENSE.md */,
+			);
+			path = Unwrap;
+			sourceTree = "<group>";
+		};
 		C59C97BC2626AB20006224D4 = {
 			isa = PBXGroup;
 			children = (
@@ -68,10 +101,13 @@
 		C59C97C72626AB20006224D4 /* Einstein */ = {
 			isa = PBXGroup;
 			children = (
+				C50617882626BF740089EC8E /* Licenses */,
+				C50617812626BF460089EC8E /* Editor */,
 				C59C97C82626AB20006224D4 /* AppDelegate.swift */,
 				C59C97CA2626AB20006224D4 /* ViewController.swift */,
 				C59C97CC2626AB20006224D4 /* Document.swift */,
 				C506176D2626B2900089EC8E /* Logging.swift */,
+				C506178D2626C0200089EC8E /* Constants.swift */,
 				C59C97CE2626AB20006224D4 /* Assets.xcassets */,
 				C59C97D02626AB20006224D4 /* Main.storyboard */,
 				C59C97D32626AB20006224D4 /* Info.plist */,
@@ -150,6 +186,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C506178B2626BFA40089EC8E /* LICENSE.md in Resources */,
 				C50617502626B0A40089EC8E /* README.md in Resources */,
 				C59C97CF2626AB20006224D4 /* Assets.xcassets in Resources */,
 				C59C97D22626AB20006224D4 /* Main.storyboard in Resources */,
@@ -163,9 +200,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C50617832626BF4F0089EC8E /* DarkTheme.swift in Sources */,
 				C59C97CB2626AB20006224D4 /* ViewController.swift in Sources */,
 				C59C97C92626AB20006224D4 /* AppDelegate.swift in Sources */,
 				C59C97CD2626AB20006224D4 /* Document.swift in Sources */,
+				C506178E2626C0200089EC8E /* Constants.swift in Sources */,
+				C50617862626BF690089EC8E /* LightTheme.swift in Sources */,
 				C506176E2626B2900089EC8E /* Logging.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

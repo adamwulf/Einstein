@@ -137,7 +137,7 @@ class Logging: SwiftyBeaver {
 
     // MARK: - Logfmt Formatting
 
-    static func format(object: PListCompatible, prefix: String = "") -> String {
+    static func format(object: Any, prefix: String = "") -> String {
         if let dict = object as? [String: PListCompatible] {
             let prefix = prefix.isEmpty ? "" : prefix + "."
             var ret = ""
@@ -178,7 +178,7 @@ class Logging: SwiftyBeaver {
                        function: String = #function,
                        line: Int = #line,
                        context: Any? = nil) {
-        if let context = context as? PListCompatible {
+        if let context = context {
             let formatted = format(object: context)
             let message = "\(message()) \(formatted)"
             log.custom(level: level, message: message, file: file, function: function, line: line, context: nil)

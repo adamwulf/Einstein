@@ -6,12 +6,17 @@
 //
 
 import Cocoa
+import Sourceful
 
 class ViewController: NSViewController {
+
+    @IBOutlet var textEditor: SyntaxTextView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        textEditor.theme = DarkTheme()
+        textEditor.delegate = self
         // Do any additional setup after loading the view.
     }
 
@@ -20,7 +25,10 @@ class ViewController: NSViewController {
         // Update the view, if already loaded.
         }
     }
-
-
 }
 
+extension ViewController: SyntaxTextViewDelegate {
+    func lexerForSource(_ source: String) -> Lexer {
+        return SwiftLexer()
+    }
+}
