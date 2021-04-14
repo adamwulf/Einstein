@@ -37,6 +37,6 @@ extension ViewController: SyntaxTextViewDelegate {
     }
 
     func lexerForSource(_ source: String) -> Lexer {
-        return SwiftLexer()
+        return TexLexer()
     }
 }
