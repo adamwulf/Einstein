@@ -7,6 +7,7 @@
 
 import Foundation
 import SwiftyBeaver
+import MMSwiftToolbox
 
 class Logging: SwiftyBeaver {
 
@@ -136,14 +137,14 @@ class Logging: SwiftyBeaver {
 
     // MARK: - Logfmt Formatting
 
-    static func format(object: Any, prefix: String = "") -> String {
-        if let dict = object as? [String: Any] {
+    static func format(object: PListCompatible, prefix: String = "") -> String {
+        if let dict = object as? [String: PListCompatible] {
             let prefix = prefix.isEmpty ? "" : prefix + "."
             var ret = ""
             for key in dict.keys.sorted() {
                 if let value = dict[key] {
                     ret += ret.isEmpty ? "" : " "
-                    if let val2 = value as? [String: Any] {
+                    if let val2 = value as? [String: PListCompatible] {
                         ret += format(object: val2, prefix: prefix + key)
                     } else {
                         if
@@ -177,15 +178,17 @@ class Logging: SwiftyBeaver {
                        function: String = #function,
                        line: Int = #line,
                        context: Any? = nil) {
-        if let context = context {
+        if let context = context as? PListCompatible {
             let formatted = format(object: context)
             let message = "\(message()) \(formatted)"
             log.custom(level: level, message: message, file: file, function: function, line: line, context: nil)
+        } else if context != nil {
+            assertionFailure("context must be PListCompatible")
         } else {
             // evaluate the message immediately so that it doesn't end up
             // as a closure getting evaluated on a swifty-beaver background thread
             let message = "\(message())"
-            log.custom(level: level, message: message, file: file, function: function, line: line, context: context)
+            log.custom(level: level, message: message, file: file, function: function, line: line, context: nil)
         }
     }
 }

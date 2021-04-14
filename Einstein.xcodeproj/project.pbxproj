@@ -111,6 +111,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 1240;
 				LastUpgradeCheck = 1240;
+				ORGANIZATIONNAME = "Milestone Made";
 				TargetAttributes = {
 					C59C97C42626AB20006224D4 = {
 						CreatedOnToolsVersion = 12.4;
