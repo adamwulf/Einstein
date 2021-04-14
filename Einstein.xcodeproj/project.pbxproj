@@ -10,6 +10,7 @@
 		C506174D2626B0190089EC8E /* SwiftTex in Frameworks */ = {isa = PBXBuildFile; productRef = C506174C2626B0190089EC8E /* SwiftTex */; };
 		C50617502626B0A40089EC8E /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = C506174F2626B0A40089EC8E /* README.md */; };
 		C50617562626B1E20089EC8E /* MMSwiftToolbox in Frameworks */ = {isa = PBXBuildFile; productRef = C50617552626B1E20089EC8E /* MMSwiftToolbox */; };
+		C506175A2626B2560089EC8E /* SwiftyBeaver in Frameworks */ = {isa = PBXBuildFile; productRef = C50617592626B2560089EC8E /* SwiftyBeaver */; };
 		C59C97C92626AB20006224D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59C97C82626AB20006224D4 /* AppDelegate.swift */; };
 		C59C97CB2626AB20006224D4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59C97CA2626AB20006224D4 /* ViewController.swift */; };
 		C59C97CD2626AB20006224D4 /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59C97CC2626AB20006224D4 /* Document.swift */; };
@@ -36,6 +37,7 @@
 			files = (
 				C50617562626B1E20089EC8E /* MMSwiftToolbox in Frameworks */,
 				C506174D2626B0190089EC8E /* SwiftTex in Frameworks */,
+				C506175A2626B2560089EC8E /* SwiftyBeaver in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,6 +94,7 @@
 			packageProductDependencies = (
 				C506174C2626B0190089EC8E /* SwiftTex */,
 				C50617552626B1E20089EC8E /* MMSwiftToolbox */,
+				C50617592626B2560089EC8E /* SwiftyBeaver */,
 			);
 			productName = Einstein;
 			productReference = C59C97C52626AB20006224D4 /* Einstein.app */;
@@ -123,6 +126,7 @@
 			packageReferences = (
 				C506174B2626B0190089EC8E /* XCRemoteSwiftPackageReference "SwiftTex" */,
 				C50617542626B1E20089EC8E /* XCRemoteSwiftPackageReference "MMSwiftToolbox" */,
+				C50617582626B2560089EC8E /* XCRemoteSwiftPackageReference "SwiftyBeaver" */,
 			);
 			productRefGroup = C59C97C62626AB20006224D4 /* Products */;
 			projectDirPath = "";
@@ -368,6 +372,14 @@
 				kind = branch;
 			};
 		};
+		C50617582626B2560089EC8E /* XCRemoteSwiftPackageReference "SwiftyBeaver" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyBeaver/SwiftyBeaver.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.9.3;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -380,6 +392,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = C50617542626B1E20089EC8E /* XCRemoteSwiftPackageReference "MMSwiftToolbox" */;
 			productName = MMSwiftToolbox;
+		};
+		C50617592626B2560089EC8E /* SwiftyBeaver */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C50617582626B2560089EC8E /* XCRemoteSwiftPackageReference "SwiftyBeaver" */;
+			productName = SwiftyBeaver;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
