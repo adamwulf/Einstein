@@ -2,6 +2,15 @@
   "object": {
     "pins": [
       {
+        "package": "MMSwiftToolbox",
+        "repositoryURL": "https://github.com/adamwulf/MMSwiftToolbox",
+        "state": {
+          "branch": "main",
+          "revision": "3096d4534877d8dbf74928f551a5fdf3287ae331",
+          "version": null
+        }
+      },
+      {
         "package": "SwiftTex",
         "repositoryURL": "https://github.com/adamwulf/SwiftTex.git",
         "state": {
