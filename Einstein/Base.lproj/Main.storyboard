@@ -709,7 +709,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="I9r-st-zqS" customClass="SyntaxTextView" customModule="Sourceful">
+                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="I9r-st-zqS" customClass="MathEditor" customModule="Einstein">
                                 <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
                             </customView>
                         </subviews>
