@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C506174D2626B0190089EC8E /* SwiftTex in Frameworks */ = {isa = PBXBuildFile; productRef = C506174C2626B0190089EC8E /* SwiftTex */; };
+		C50617502626B0A40089EC8E /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = C506174F2626B0A40089EC8E /* README.md */; };
 		C59C97C92626AB20006224D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59C97C82626AB20006224D4 /* AppDelegate.swift */; };
 		C59C97CB2626AB20006224D4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59C97CA2626AB20006224D4 /* ViewController.swift */; };
 		C59C97CD2626AB20006224D4 /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59C97CC2626AB20006224D4 /* Document.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C506174F2626B0A40089EC8E /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		C59C97C52626AB20006224D4 /* Einstein.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Einstein.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C59C97C82626AB20006224D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C59C97CA2626AB20006224D4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -41,6 +43,7 @@
 		C59C97BC2626AB20006224D4 = {
 			isa = PBXGroup;
 			children = (
+				C506174F2626B0A40089EC8E /* README.md */,
 				C59C97C72626AB20006224D4 /* Einstein */,
 				C59C97C62626AB20006224D4 /* Products */,
 			);
@@ -131,6 +134,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C50617502626B0A40089EC8E /* README.md in Resources */,
 				C59C97CF2626AB20006224D4 /* Assets.xcassets in Resources */,
 				C59C97D22626AB20006224D4 /* Main.storyboard in Resources */,
 			);
