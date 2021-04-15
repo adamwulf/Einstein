@@ -709,18 +709,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
+                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="ZDK-a9-1IV">
+                                <rect key="frame" x="0.0" y="170" width="480" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="3Vr-Yc-udr"/>
+                                </constraints>
+                            </customView>
                             <customView translatesAutoresizingMaskIntoConstraints="NO" id="I9r-st-zqS" customClass="MathEditor" customModule="Einstein">
-                                <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                                <rect key="frame" x="0.0" y="0.0" width="480" height="170"/>
                             </customView>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="I9r-st-zqS" firstAttribute="top" secondItem="ERx-hH-rdd" secondAttribute="top" id="StZ-Pj-9d0"/>
+                            <constraint firstAttribute="trailing" secondItem="ZDK-a9-1IV" secondAttribute="trailing" id="J2E-01-PCO"/>
+                            <constraint firstItem="ZDK-a9-1IV" firstAttribute="leading" secondItem="ERx-hH-rdd" secondAttribute="leading" id="SpB-FP-s4e"/>
                             <constraint firstAttribute="bottom" secondItem="I9r-st-zqS" secondAttribute="bottom" id="Vm8-et-HKY"/>
+                            <constraint firstItem="I9r-st-zqS" firstAttribute="top" secondItem="ZDK-a9-1IV" secondAttribute="bottom" id="W4V-Su-XL2"/>
                             <constraint firstAttribute="trailing" secondItem="I9r-st-zqS" secondAttribute="trailing" id="Z8F-kB-v5X"/>
                             <constraint firstItem="I9r-st-zqS" firstAttribute="leading" secondItem="ERx-hH-rdd" secondAttribute="leading" id="kvS-2l-eeq"/>
+                            <constraint firstItem="ZDK-a9-1IV" firstAttribute="top" secondItem="ERx-hH-rdd" secondAttribute="top" id="sAg-cR-5H8"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="labelContainer" destination="ZDK-a9-1IV" id="TBr-88-TXs"/>
                         <outlet property="textEditor" destination="I9r-st-zqS" id="ryv-Yq-sZe"/>
                     </connections>
                 </viewController>

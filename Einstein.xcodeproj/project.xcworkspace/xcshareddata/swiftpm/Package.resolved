@@ -2,6 +2,15 @@
   "object": {
     "pins": [
       {
+        "package": "IosMath",
+        "repositoryURL": "https://github.com/adamwulf/iosMath",
+        "state": {
+          "branch": "feature/spm",
+          "revision": "443520c9e33be3a5c8ab18ff6462e3f2e4af7d30",
+          "version": null
+        }
+      },
+      {
         "package": "MMSwiftToolbox",
         "repositoryURL": "https://github.com/adamwulf/MMSwiftToolbox",
         "state": {
