@@ -55,7 +55,7 @@ class ViewController: NSViewController {
             printVisitor.ignoreSubscripts = false
             let maths = ast.accept(visitor: printVisitor)
 
-            label.latex = maths.joined(separator: "\\")
+            label.latex = maths.joined(separator: "\n\n")
         } catch {
             // ignore
         }
