@@ -56,7 +56,7 @@ class ViewController: NSViewController {
 
             label.latex = maths.joined(separator: "\\\\\n")
         } catch {
-            // ignore
+            Logging.error("parse_error", context: ["error": error])
         }
     }
 
