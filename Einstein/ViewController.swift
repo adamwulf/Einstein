@@ -52,10 +52,9 @@ class ViewController: NSViewController {
         do {
             let ast = try parser.parse()
             let printVisitor = PrintVisitor()
-            printVisitor.ignoreSubscripts = false
             let maths = ast.accept(visitor: printVisitor)
 
-            label.latex = maths.joined(separator: "\\\\").replacingOccurrences(of: "\n", with: "\\\\\n")
+            label.latex = maths.joined(separator: "\\\\\n")
         } catch {
             // ignore
         }
