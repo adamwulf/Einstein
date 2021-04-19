@@ -683,7 +683,7 @@
         <!--Window Controller-->
         <scene sceneID="R2V-B0-nI4">
             <objects>
-                <windowController storyboardIdentifier="Document Window Controller" id="jGA-0Y-lOj" sceneMemberID="viewController">
+                <windowController storyboardIdentifier="Document Window Controller" id="jGA-0Y-lOj" customClass="PrimaryWindowController" customModule="Einstein" customModuleProvider="target" sceneMemberID="viewController">
                     <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="Ckk-yw-fiv">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
@@ -694,49 +694,91 @@
                         </connections>
                     </window>
                     <connections>
-                        <segue destination="5gI-5U-AMq" kind="relationship" relationship="window.shadowedContentViewController" id="nsd-lR-9xd"/>
+                        <segue destination="av4-Rc-CzT" kind="relationship" relationship="window.shadowedContentViewController" id="bJp-gb-XBS"/>
                     </connections>
                 </windowController>
                 <customObject id="6f7-a7-6o1" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="75" y="250"/>
         </scene>
-        <!--View Controller-->
+        <!--Source View Controller-->
         <scene sceneID="hIz-AP-VOD">
             <objects>
-                <viewController id="5gI-5U-AMq" customClass="ViewController" customModule="Einstein" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="5gI-5U-AMq" customClass="SourceViewController" customModule="Einstein" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="ERx-hH-rdd">
                         <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="ZDK-a9-1IV">
-                                <rect key="frame" x="0.0" y="170" width="480" height="100"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="3Vr-Yc-udr"/>
-                                </constraints>
-                            </customView>
                             <customView translatesAutoresizingMaskIntoConstraints="NO" id="I9r-st-zqS" customClass="MathEditor" customModule="Einstein">
-                                <rect key="frame" x="0.0" y="0.0" width="480" height="170"/>
+                                <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
                             </customView>
                         </subviews>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="ZDK-a9-1IV" secondAttribute="trailing" id="J2E-01-PCO"/>
-                            <constraint firstItem="ZDK-a9-1IV" firstAttribute="leading" secondItem="ERx-hH-rdd" secondAttribute="leading" id="SpB-FP-s4e"/>
+                            <constraint firstItem="I9r-st-zqS" firstAttribute="top" secondItem="ERx-hH-rdd" secondAttribute="top" id="9AP-0p-SgK"/>
                             <constraint firstAttribute="bottom" secondItem="I9r-st-zqS" secondAttribute="bottom" id="Vm8-et-HKY"/>
-                            <constraint firstItem="I9r-st-zqS" firstAttribute="top" secondItem="ZDK-a9-1IV" secondAttribute="bottom" id="W4V-Su-XL2"/>
                             <constraint firstAttribute="trailing" secondItem="I9r-st-zqS" secondAttribute="trailing" id="Z8F-kB-v5X"/>
                             <constraint firstItem="I9r-st-zqS" firstAttribute="leading" secondItem="ERx-hH-rdd" secondAttribute="leading" id="kvS-2l-eeq"/>
-                            <constraint firstItem="ZDK-a9-1IV" firstAttribute="top" secondItem="ERx-hH-rdd" secondAttribute="top" id="sAg-cR-5H8"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="labelContainer" destination="ZDK-a9-1IV" id="TBr-88-TXs"/>
                         <outlet property="textEditor" destination="I9r-st-zqS" id="ryv-Yq-sZe"/>
                     </connections>
                 </viewController>
                 <customObject id="2Tp-Fl-jBw" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="655"/>
+            <point key="canvasLocation" x="-145" y="1264"/>
+        </scene>
+        <!--Primary View Controller-->
+        <scene sceneID="Yt6-S2-3xY">
+            <objects>
+                <splitViewController id="av4-Rc-CzT" customClass="PrimaryViewController" customModule="Einstein" customModuleProvider="target" sceneMemberID="viewController">
+                    <splitViewItems>
+                        <splitViewItem id="eUz-fo-2rx"/>
+                        <splitViewItem id="wZu-5o-nZJ"/>
+                    </splitViewItems>
+                    <splitView key="splitView" dividerStyle="thin" vertical="YES" id="FzP-Lc-nhr">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <connections>
+                            <outlet property="delegate" destination="av4-Rc-CzT" id="Wxm-8G-9tu"/>
+                        </connections>
+                    </splitView>
+                    <connections>
+                        <outlet property="splitView" destination="FzP-Lc-nhr" id="4jm-If-bOi"/>
+                        <segue destination="5gI-5U-AMq" kind="relationship" relationship="splitItems" id="Bnm-DS-g4Q"/>
+                        <segue destination="CZ5-Gc-MRA" kind="relationship" relationship="splitItems" id="b0A-pr-exN"/>
+                    </connections>
+                </splitViewController>
+                <customObject id="xLc-kj-ykX" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="75" y="764"/>
+        </scene>
+        <!--Rendered View Controller-->
+        <scene sceneID="Beh-OC-90M">
+            <objects>
+                <viewController id="CZ5-Gc-MRA" customClass="RenderedViewController" customModule="Einstein" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="OmL-mD-J1F">
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="2EV-Gs-1wO">
+                                <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                            </customView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="2EV-Gs-1wO" secondAttribute="bottom" id="90s-JM-5Kn"/>
+                            <constraint firstAttribute="trailing" secondItem="2EV-Gs-1wO" secondAttribute="trailing" id="cki-95-EII"/>
+                            <constraint firstItem="2EV-Gs-1wO" firstAttribute="top" secondItem="OmL-mD-J1F" secondAttribute="top" id="jo4-dh-7El"/>
+                            <constraint firstItem="2EV-Gs-1wO" firstAttribute="leading" secondItem="OmL-mD-J1F" secondAttribute="leading" id="uu0-kS-HKS"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="labelContainer" destination="2EV-Gs-1wO" id="hUW-tp-XaY"/>
+                    </connections>
+                </viewController>
+                <customObject id="cGK-Ma-5mZ" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="363" y="1264"/>
         </scene>
     </scenes>
 </document>

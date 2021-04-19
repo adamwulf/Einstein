@@ -12,15 +12,20 @@
 		C50617562626B1E20089EC8E /* MMSwiftToolbox in Frameworks */ = {isa = PBXBuildFile; productRef = C50617552626B1E20089EC8E /* MMSwiftToolbox */; };
 		C506175A2626B2560089EC8E /* SwiftyBeaver in Frameworks */ = {isa = PBXBuildFile; productRef = C50617592626B2560089EC8E /* SwiftyBeaver */; };
 		C506176E2626B2900089EC8E /* Logging.swift in Sources */ = {isa = PBXBuildFile; fileRef = C506176D2626B2900089EC8E /* Logging.swift */; };
-		C50617722626BB3F0089EC8E /* Sourceful in Frameworks */ = {isa = PBXBuildFile; productRef = C50617712626BB3F0089EC8E /* Sourceful */; };
 		C50617832626BF4F0089EC8E /* DarkTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50617822626BF4F0089EC8E /* DarkTheme.swift */; };
 		C50617862626BF690089EC8E /* LightTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50617852626BF690089EC8E /* LightTheme.swift */; };
 		C506178B2626BFA40089EC8E /* LICENSE.md in Resources */ = {isa = PBXBuildFile; fileRef = C506178A2626BFA40089EC8E /* LICENSE.md */; };
 		C506178E2626C0200089EC8E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C506178D2626C0200089EC8E /* Constants.swift */; };
 		C50617922626C5090089EC8E /* MathEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50617912626C5090089EC8E /* MathEditor.swift */; };
 		C50617952626C9030089EC8E /* TexLexer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50617942626C9030089EC8E /* TexLexer.swift */; };
+		C567C34E262CFB0100CF79B0 /* Einstein.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C567C34D262CFB0100CF79B0 /* Einstein.storyboard */; };
+		C567C356262D271600CF79B0 /* PrimaryWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C567C355262D271600CF79B0 /* PrimaryWindowController.swift */; };
+		C567C360262D2C3400CF79B0 /* Sourceful in Frameworks */ = {isa = PBXBuildFile; productRef = C567C35F262D2C3400CF79B0 /* Sourceful */; };
+		C567C363262D374B00CF79B0 /* ContentState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C567C362262D374B00CF79B0 /* ContentState.swift */; };
+		C5935AEC262CF4CE00B31CF6 /* PrimaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5935AEB262CF4CE00B31CF6 /* PrimaryViewController.swift */; };
+		C5935AF0262CF5D700B31CF6 /* RenderedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5935AEF262CF5D700B31CF6 /* RenderedViewController.swift */; };
 		C59C97C92626AB20006224D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59C97C82626AB20006224D4 /* AppDelegate.swift */; };
-		C59C97CB2626AB20006224D4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59C97CA2626AB20006224D4 /* ViewController.swift */; };
+		C59C97CB2626AB20006224D4 /* SourceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59C97CA2626AB20006224D4 /* SourceViewController.swift */; };
 		C59C97CD2626AB20006224D4 /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59C97CC2626AB20006224D4 /* Document.swift */; };
 		C59C97CF2626AB20006224D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C59C97CE2626AB20006224D4 /* Assets.xcassets */; };
 		C59C97D22626AB20006224D4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C59C97D02626AB20006224D4 /* Main.storyboard */; };
@@ -36,9 +41,14 @@
 		C506178D2626C0200089EC8E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		C50617912626C5090089EC8E /* MathEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathEditor.swift; sourceTree = "<group>"; };
 		C50617942626C9030089EC8E /* TexLexer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TexLexer.swift; sourceTree = "<group>"; };
+		C567C34D262CFB0100CF79B0 /* Einstein.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Einstein.storyboard; sourceTree = "<group>"; };
+		C567C355262D271600CF79B0 /* PrimaryWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryWindowController.swift; sourceTree = "<group>"; };
+		C567C362262D374B00CF79B0 /* ContentState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentState.swift; sourceTree = "<group>"; };
+		C5935AEB262CF4CE00B31CF6 /* PrimaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryViewController.swift; sourceTree = "<group>"; };
+		C5935AEF262CF5D700B31CF6 /* RenderedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenderedViewController.swift; sourceTree = "<group>"; };
 		C59C97C52626AB20006224D4 /* Einstein.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Einstein.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C59C97C82626AB20006224D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C59C97CA2626AB20006224D4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C59C97CA2626AB20006224D4 /* SourceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceViewController.swift; sourceTree = "<group>"; };
 		C59C97CC2626AB20006224D4 /* Document.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Document.swift; sourceTree = "<group>"; };
 		C59C97CE2626AB20006224D4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C59C97D12626AB20006224D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -51,9 +61,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C567C360262D2C3400CF79B0 /* Sourceful in Frameworks */,
 				C50617562626B1E20089EC8E /* MMSwiftToolbox in Frameworks */,
 				C5E14263262801500041DEF2 /* IosMath in Frameworks */,
-				C50617722626BB3F0089EC8E /* Sourceful in Frameworks */,
 				C506174D2626B0190089EC8E /* SwiftTex in Frameworks */,
 				C506175A2626B2560089EC8E /* SwiftyBeaver in Frameworks */,
 			);
@@ -112,8 +122,13 @@
 				C50617882626BF740089EC8E /* Licenses */,
 				C50617812626BF460089EC8E /* Editor */,
 				C59C97C82626AB20006224D4 /* AppDelegate.swift */,
-				C59C97CA2626AB20006224D4 /* ViewController.swift */,
+				C567C355262D271600CF79B0 /* PrimaryWindowController.swift */,
+				C5935AEB262CF4CE00B31CF6 /* PrimaryViewController.swift */,
+				C59C97CA2626AB20006224D4 /* SourceViewController.swift */,
+				C5935AEF262CF5D700B31CF6 /* RenderedViewController.swift */,
+				C567C34D262CFB0100CF79B0 /* Einstein.storyboard */,
 				C59C97CC2626AB20006224D4 /* Document.swift */,
+				C567C362262D374B00CF79B0 /* ContentState.swift */,
 				C506176D2626B2900089EC8E /* Logging.swift */,
 				C506178D2626C0200089EC8E /* Constants.swift */,
 				C59C97CE2626AB20006224D4 /* Assets.xcassets */,
@@ -144,8 +159,8 @@
 				C506174C2626B0190089EC8E /* SwiftTex */,
 				C50617552626B1E20089EC8E /* MMSwiftToolbox */,
 				C50617592626B2560089EC8E /* SwiftyBeaver */,
-				C50617712626BB3F0089EC8E /* Sourceful */,
 				C5E14262262801500041DEF2 /* IosMath */,
+				C567C35F262D2C3400CF79B0 /* Sourceful */,
 			);
 			productName = Einstein;
 			productReference = C59C97C52626AB20006224D4 /* Einstein.app */;
@@ -179,8 +194,8 @@
 				C506174B2626B0190089EC8E /* XCRemoteSwiftPackageReference "SwiftTex" */,
 				C50617542626B1E20089EC8E /* XCRemoteSwiftPackageReference "MMSwiftToolbox" */,
 				C50617582626B2560089EC8E /* XCRemoteSwiftPackageReference "SwiftyBeaver" */,
-				C50617702626BB3F0089EC8E /* XCRemoteSwiftPackageReference "Sourceful" */,
 				C5E14261262801500041DEF2 /* XCRemoteSwiftPackageReference "iosMath" */,
+				C567C35E262D2C3400CF79B0 /* XCRemoteSwiftPackageReference "Sourceful" */,
 			);
 			productRefGroup = C59C97C62626AB20006224D4 /* Products */;
 			projectDirPath = "";
@@ -200,6 +215,7 @@
 				C50617502626B0A40089EC8E /* README.md in Resources */,
 				C59C97CF2626AB20006224D4 /* Assets.xcassets in Resources */,
 				C59C97D22626AB20006224D4 /* Main.storyboard in Resources */,
+				C567C34E262CFB0100CF79B0 /* Einstein.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -211,11 +227,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				C50617832626BF4F0089EC8E /* DarkTheme.swift in Sources */,
+				C567C363262D374B00CF79B0 /* ContentState.swift in Sources */,
 				C50617952626C9030089EC8E /* TexLexer.swift in Sources */,
-				C59C97CB2626AB20006224D4 /* ViewController.swift in Sources */,
+				C59C97CB2626AB20006224D4 /* SourceViewController.swift in Sources */,
+				C5935AEC262CF4CE00B31CF6 /* PrimaryViewController.swift in Sources */,
+				C567C356262D271600CF79B0 /* PrimaryWindowController.swift in Sources */,
 				C59C97C92626AB20006224D4 /* AppDelegate.swift in Sources */,
 				C59C97CD2626AB20006224D4 /* Document.swift in Sources */,
 				C50617922626C5090089EC8E /* MathEditor.swift in Sources */,
+				C5935AF0262CF5D700B31CF6 /* RenderedViewController.swift in Sources */,
 				C506178E2626C0200089EC8E /* Constants.swift in Sources */,
 				C50617862626BF690089EC8E /* LightTheme.swift in Sources */,
 				C506176E2626B2900089EC8E /* Logging.swift in Sources */,
@@ -441,12 +461,12 @@
 				minimumVersion = 1.9.3;
 			};
 		};
-		C50617702626BB3F0089EC8E /* XCRemoteSwiftPackageReference "Sourceful" */ = {
+		C567C35E262D2C3400CF79B0 /* XCRemoteSwiftPackageReference "Sourceful" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/twostraws/Sourceful";
+			repositoryURL = "https://github.com/adamwulf/Sourceful.git";
 			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.3.0;
+				branch = feature/delegates;
+				kind = branch;
 			};
 		};
 		C5E14261262801500041DEF2 /* XCRemoteSwiftPackageReference "iosMath" */ = {
@@ -475,9 +495,9 @@
 			package = C50617582626B2560089EC8E /* XCRemoteSwiftPackageReference "SwiftyBeaver" */;
 			productName = SwiftyBeaver;
 		};
-		C50617712626BB3F0089EC8E /* Sourceful */ = {
+		C567C35F262D2C3400CF79B0 /* Sourceful */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = C50617702626BB3F0089EC8E /* XCRemoteSwiftPackageReference "Sourceful" */;
+			package = C567C35E262D2C3400CF79B0 /* XCRemoteSwiftPackageReference "Sourceful" */;
 			productName = Sourceful;
 		};
 		C5E14262262801500041DEF2 /* IosMath */ = {
