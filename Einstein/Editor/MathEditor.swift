@@ -48,8 +48,12 @@ extension MathEditor: SyntaxTextViewDelegate {
 
     func handleInsertOf(_ syntaxTextView: SyntaxTextView, text: String, selection: NSRange) -> Bool {
         if text == "(" {
-            syntaxTextView.contentTextView.insertText("()", replacementRange: selection)
-            syntaxTextView.contentTextView.moveLeft(nil)
+            let range = syntaxTextView.contentTextView.selectedRange()
+            let selected = (syntaxTextView.contentTextView.string as NSString).substring(with: range)
+            syntaxTextView.contentTextView.undoManager?.beginUndoGrouping()
+            syntaxTextView.contentTextView.insertText("(\(selected))", replacementRange: selection)
+            syntaxTextView.contentTextView.setSelectedRange(_NSRange(location: range.location + 1, length: range.length))
+            syntaxTextView.contentTextView.undoManager?.endUndoGrouping()
             return true
         }
         return false
@@ -76,7 +80,6 @@ extension MathEditor: SyntaxTextViewDelegate {
 
     func textView(_ syntaxTextView: SyntaxTextView, doCommandBy commandSelector: Selector) -> Bool {
         Logging.info("editor", context: ["action": "do_command", "command": commandSelector.description])
-        delegate?.didBeginEditing(self)
         return false
     }
 

@@ -26,6 +26,8 @@ class SourceViewController: NSViewController {
         }
         set {
             assert(newValue is Document)
+            // clear out the undo manager from any document we were using before and update our represented object
+            document?.undoManager = nil
             super.representedObject = newValue
 
             // Pass down the represented object to all of the child view controllers.
@@ -33,7 +35,13 @@ class SourceViewController: NSViewController {
                 child.representedObject = representedObject
             }
 
+            // setting the document's undo manager let's the window show the correct "Edited" state in the title
+            // and prompt to save when closing the window, etc
+            document?.undoManager = textEditor.undoManager
+            // load the document in to the source editor
             refresh()
+            // clear out the undo state from loading it
+            textEditor.undoManager?.removeAllActions()
         }
     }
 
@@ -43,7 +51,6 @@ class SourceViewController: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        textEditor.text = ""
         textEditor.delegate = self
         // Do any additional setup after loading the view.
 
@@ -51,16 +58,13 @@ class SourceViewController: NSViewController {
     }
 
     func refresh() {
-        textEditor.text = document?.content?.text ?? ""
+        textEditor.text = document?.text ?? ""
         textEditor.setNeedsDisplay(textEditor.bounds)
         parse()
     }
 
     func parse() {
         let source = textEditor.text
-
-        document?.content?.text = source
-
         let lexer = Lexer(input: source)
         let tokens = lexer.tokenize()
         let parser = Parser(tokens: tokens)
@@ -82,6 +86,7 @@ extension SourceViewController: MathEditorDelegate {
     }
 
     func didEditText(_ editor: MathEditor) {
+        document?.text = editor.text
         parse()
     }
 }
