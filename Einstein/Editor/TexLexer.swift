@@ -19,9 +19,6 @@ public class TexLexer: SourceCodeRegexLexer {
 
         var generators = [TokenGenerator?]()
 
-        // TeX tags
-        generators.append(regexGenerator("\\\\[a-zA-Z]+\\b", tokenType: .keyword))
-
         // identifiers for variables/functions/etc
         generators.append(regexGenerator("(?<![a-zA-Z])[a-zA-Z]+(?=[\\W_])", tokenType: .identifier))
         generators.append(regexGenerator("\\b[a-zA-Z]+\\b", tokenType: .identifier))
@@ -29,7 +26,9 @@ public class TexLexer: SourceCodeRegexLexer {
         // numbers
         generators.append(regexGenerator("[\\-]?[0-9]+\\.?[0-9]*", tokenType: .number))
 
-        let foo = 4 + 3
+        // TeX tags
+        generators.append(regexGenerator("\\\\[a-zA-Z]+\\b", tokenType: .keyword))
+        generators.append(regexGenerator("\\\\\\\\", tokenType: .plain))
 
         return generators.compactMap({ $0 })
     }()
