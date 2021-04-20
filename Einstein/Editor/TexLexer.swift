@@ -30,6 +30,9 @@ public class TexLexer: SourceCodeRegexLexer {
         generators.append(regexGenerator("\\\\[a-zA-Z]+\\b", tokenType: .keyword))
         generators.append(regexGenerator("\\\\\\\\", tokenType: .plain))
 
+        // comments
+        generators.append(regexGenerator("%[^\n]*", tokenType: .comment))
+
         return generators.compactMap({ $0 })
     }()
 
