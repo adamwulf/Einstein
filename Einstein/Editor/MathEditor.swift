@@ -9,6 +9,7 @@
 import Foundation
 import AppKit
 import Sourceful
+import SwiftTex
 
 protocol MathEditorDelegate: class {
     func didBeginEditing(_ editor: MathEditor)
@@ -25,6 +26,20 @@ class MathEditor: NSView {
         }
         set {
             editor.text = newValue
+        }
+    }
+
+    func highlight(errors: [ParseError]) {
+        guard !errors.isEmpty else { return }
+
+        for error in errors {
+            if let token = error.token {
+                let range = NSRange(location: token.loc, length: token.raw.utf8.count)
+                editor.contentTextView.textStorage?.addAttributes([.underlineStyle: NSUnderlineStyle.thick.rawValue,
+                                                                   .underlineColor: NSColor.red,
+                                                                   .expansion: -0.0001],
+                                                                  range: range)
+            }
         }
     }
 

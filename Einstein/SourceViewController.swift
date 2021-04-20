@@ -72,11 +72,12 @@ class SourceViewController: NSViewController {
         let parser = Parser(tokens: tokens)
 
         do {
-            let ast = try parser.parse()
+            let (expressions: ast, errors: errors) = try parser.parse()
 
+            textEditor.highlight(errors: errors)
             delegate?.didParse(mathAst: ast)
         } catch {
-            Logging.error("parse_error", context: ["error": error])
+            Logging.error("error", context: ["error": error])
         }
     }
 }
