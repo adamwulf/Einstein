@@ -33,8 +33,23 @@ class MathEditor: NSView {
         guard !errors.isEmpty else { return }
 
         for error in errors {
+            let maxLen = editor.contentTextView.string.count
             if let token = error.token {
                 let range = NSRange(location: token.loc, length: token.raw.utf8.count)
+
+                guard
+                    range.lowerBound >= 0,
+                    range.upperBound <= maxLen
+                else {
+                    continue
+                }
+
+                editor.contentTextView.textStorage?.addAttributes([.underlineStyle: NSUnderlineStyle.thick.rawValue,
+                                                                   .underlineColor: NSColor.red,
+                                                                   .expansion: -0.0001],
+                                                                  range: range)
+            } else if maxLen > 0 {
+                let range = NSRange(location: maxLen - 1, length: 1)
                 editor.contentTextView.textStorage?.addAttributes([.underlineStyle: NSUnderlineStyle.thick.rawValue,
                                                                    .underlineColor: NSColor.red,
                                                                    .expansion: -0.0001],
