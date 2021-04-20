@@ -10,7 +10,9 @@ import Sourceful
 import SwiftTex
 import IosMath
 
-protocol SourceViewControllerDelegate {
+@objc protocol SourceViewControllerDelegateObjC { }
+
+protocol SourceViewControllerDelegate: SourceViewControllerDelegateObjC {
     func didParse(mathAst: [ExprNode])
 }
 
@@ -46,7 +48,7 @@ class SourceViewController: NSViewController {
     }
 
     @IBOutlet var textEditor: MathEditor!
-    var delegate: SourceViewControllerDelegate?
+    weak var delegate: SourceViewControllerDelegate?
 
     override func viewDidLoad() {
         super.viewDidLoad()

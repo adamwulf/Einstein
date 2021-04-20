@@ -61,4 +61,3 @@ class Document: NSDocument {
         contentViewController?.representedObject = self
     }
 }
-

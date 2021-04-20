@@ -31,7 +31,7 @@ public class TexLexer: SourceCodeRegexLexer {
 
         let foo = 4 + 3
 
-        return generators.compactMap( { $0 })
+        return generators.compactMap({ $0 })
     }()
 
     public func generators(source: String) -> [TokenGenerator] {
