@@ -33,6 +33,12 @@ class MathEditor: NSView {
         guard !errors.isEmpty else { return }
 
         for error in errors {
+            if let token = error.token {
+                Logging.error("syntax_error", context: ["loc": token.loc, "line": token.line, "col": token.col, "token": token.raw])
+            } else {
+                Logging.error("syntax_error", context: ["error": error.localizedDescription])
+            }
+
             let maxLen = editor.contentTextView.string.count
             if let token = error.token {
                 let range = NSRange(location: token.loc, length: token.raw.utf8.count)
@@ -105,11 +111,11 @@ extension MathEditor: SyntaxTextViewDelegate {
     }
 
     func didChangeSelectedRange(_ syntaxTextView: SyntaxTextView, selectedRange: NSRange) {
-        Logging.info("editor", context: ["action": "did_change_selection"])
+//        Logging.info("editor", context: ["action": "did_change_selection"])
     }
 
     func textView(_ syntaxTextView: SyntaxTextView, doCommandBy commandSelector: Selector) -> Bool {
-        Logging.info("editor", context: ["action": "do_command", "command": commandSelector.description])
+//        Logging.info("editor", context: ["action": "do_command", "command": commandSelector.description])
         return false
     }
 
@@ -124,7 +130,7 @@ extension MathEditor: SyntaxTextViewDelegate {
     func textView(_ syntaxTextView: SyntaxTextView,
                   willChangeSelectionFromCharacterRange oldSelectedCharRange: NSRange,
                   toCharacterRange newSelectedCharRange: NSRange) -> NSRange {
-        Logging.info("editor", context: ["action": "will_change_selection"])
+//        Logging.info("editor", context: ["action": "will_change_selection"])
         return newSelectedCharRange
     }
 
