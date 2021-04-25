@@ -69,7 +69,7 @@ class SourceViewController: NSViewController {
         let source = textEditor.text
         let lexer = Lexer(input: source)
         let tokens = lexer.tokenize()
-        let parser = Parser(tokens: tokens)
+        let parser = Parser(tokens: tokens.tokens)
 
         do {
             let (expressions: ast, errors: errors) = try parser.parse()

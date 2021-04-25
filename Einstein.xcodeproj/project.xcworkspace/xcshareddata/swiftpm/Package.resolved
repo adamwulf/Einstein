@@ -15,7 +15,7 @@
         "repositoryURL": "https://github.com/adamwulf/MMSwiftToolbox",
         "state": {
           "branch": "main",
-          "revision": "24625ba985e55f03b5a760d28ca7bd69c5a32884",
+          "revision": "01f9204071d23a944ccdad7e3c4be92b3e4784fb",
           "version": null
         }
       },
@@ -33,7 +33,7 @@
         "repositoryURL": "https://github.com/adamwulf/SwiftTex.git",
         "state": {
           "branch": "main",
-          "revision": "c5e80012fe7748e9a484f89951edfe873647d75f",
+          "revision": "d75fb8ec8903503ac84d0c84d12675e58189d31d",
           "version": null
         }
       },
