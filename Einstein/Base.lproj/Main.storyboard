@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="17701"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="18122"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -689,6 +689,30 @@
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
                         <rect key="contentRect" x="196" y="240" width="480" height="270"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
+                        <toolbar key="toolbar" implicitIdentifier="0F830882-C5AB-4F55-8506-96C7E6120C67" autosavesConfiguration="NO" displayMode="iconAndLabel" sizeMode="regular" id="zHd-s3-J2l">
+                            <allowedToolbarItems>
+                                <toolbarItem implicitItemIdentifier="14167479-1445-49F0-BB0E-99FCEEE3261C" label="Source" paletteLabel="Source" tag="-1" image="scroll.fill" catalog="system" bordered="YES" id="GVF-n3-E1R">
+                                    <size key="minSize" width="29" height="25"/>
+                                    <size key="maxSize" width="29" height="25"/>
+                                </toolbarItem>
+                                <toolbarItem implicitItemIdentifier="192BD558-0861-4EC7-A585-953A0A97944C" label="Environment" paletteLabel="Environment" tag="-1" image="leaf.fill" catalog="system" bordered="YES" id="nIx-qd-LrC">
+                                    <size key="minSize" width="28" height="25"/>
+                                    <size key="maxSize" width="28" height="25"/>
+                                </toolbarItem>
+                                <toolbarItem implicitItemIdentifier="CD1F7BD9-E277-4B61-8DD9-756CBA69B94F" label="Document" paletteLabel="Document" tag="-1" image="doc.richtext" catalog="system" bordered="YES" id="QbR-VJ-i5G">
+                                    <size key="minSize" width="26" height="25"/>
+                                    <size key="maxSize" width="26" height="25"/>
+                                </toolbarItem>
+                                <toolbarItem implicitItemIdentifier="NSToolbarSpaceItem" id="rmL-mz-G09"/>
+                                <toolbarItem implicitItemIdentifier="NSToolbarFlexibleSpaceItem" id="aes-MI-ND7"/>
+                            </allowedToolbarItems>
+                            <defaultToolbarItems>
+                                <toolbarItem reference="aes-MI-ND7"/>
+                                <toolbarItem reference="GVF-n3-E1R"/>
+                                <toolbarItem reference="nIx-qd-LrC"/>
+                                <toolbarItem reference="QbR-VJ-i5G"/>
+                            </defaultToolbarItems>
+                        </toolbar>
                         <connections>
                             <outlet property="delegate" destination="jGA-0Y-lOj" id="98r-iN-zZc"/>
                         </connections>
@@ -726,7 +750,7 @@
                 </viewController>
                 <customObject id="2Tp-Fl-jBw" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-145" y="1264"/>
+            <point key="canvasLocation" x="-437" y="1286"/>
         </scene>
         <!--Primary View Controller-->
         <scene sceneID="Yt6-S2-3xY">
@@ -734,7 +758,8 @@
                 <splitViewController id="av4-Rc-CzT" customClass="PrimaryViewController" customModule="Einstein" customModuleProvider="target" sceneMemberID="viewController">
                     <splitViewItems>
                         <splitViewItem id="eUz-fo-2rx"/>
-                        <splitViewItem id="wZu-5o-nZJ"/>
+                        <splitViewItem id="I5G-sY-60p"/>
+                        <splitViewItem id="vpI-5W-SD9"/>
                     </splitViewItems>
                     <splitView key="splitView" dividerStyle="thin" vertical="YES" id="FzP-Lc-nhr">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
@@ -746,7 +771,8 @@
                     <connections>
                         <outlet property="splitView" destination="FzP-Lc-nhr" id="4jm-If-bOi"/>
                         <segue destination="5gI-5U-AMq" kind="relationship" relationship="splitItems" id="Bnm-DS-g4Q"/>
-                        <segue destination="CZ5-Gc-MRA" kind="relationship" relationship="splitItems" id="b0A-pr-exN"/>
+                        <segue destination="qe7-Ry-MHH" kind="relationship" relationship="splitItems" id="fKW-DU-hym"/>
+                        <segue destination="CZ5-Gc-MRA" kind="relationship" relationship="splitItems" id="VdL-ba-VDP"/>
                     </connections>
                 </splitViewController>
                 <customObject id="xLc-kj-ykX" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
@@ -778,7 +804,25 @@
                 </viewController>
                 <customObject id="cGK-Ma-5mZ" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="363" y="1264"/>
+            <point key="canvasLocation" x="625" y="1286"/>
+        </scene>
+        <!--Environment View Controller-->
+        <scene sceneID="atA-Ag-GF2">
+            <objects>
+                <viewController id="qe7-Ry-MHH" customClass="EnvironmentViewController" customModule="Einstein" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="0FP-t9-es2">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </view>
+                </viewController>
+                <customObject id="U9q-lm-B2s" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="90" y="1301"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="doc.richtext" catalog="system" width="14" height="16"/>
+        <image name="leaf.fill" catalog="system" width="16" height="14"/>
+        <image name="scroll.fill" catalog="system" width="17" height="16"/>
+    </resources>
 </document>
