@@ -22,4 +22,18 @@ class PrimaryWindowController: NSWindowController, NSWindowDelegate {
         shouldCascadeWindows = true
     }
 
+
+    // MARK: - Actions
+
+    @IBAction func toggleSourceView(_ sender: NSToolbarItem) {
+        primaryViewController.toggleSourceView(sender)
+    }
+
+    @IBAction func toggleEnvView(_ sender: NSToolbarItem) {
+        primaryViewController.toggleEnvView(sender)
+    }
+
+    @IBAction func toggleRenderedView(_ sender: NSToolbarItem) {
+        primaryViewController.toggleRenderedView(sender)
+    }
 }

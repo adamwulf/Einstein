@@ -691,17 +691,26 @@
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
                         <toolbar key="toolbar" implicitIdentifier="0F830882-C5AB-4F55-8506-96C7E6120C67" autosavesConfiguration="NO" displayMode="iconAndLabel" sizeMode="regular" id="zHd-s3-J2l">
                             <allowedToolbarItems>
-                                <toolbarItem implicitItemIdentifier="14167479-1445-49F0-BB0E-99FCEEE3261C" label="Source" paletteLabel="Source" tag="-1" image="scroll.fill" catalog="system" bordered="YES" id="GVF-n3-E1R">
+                                <toolbarItem implicitItemIdentifier="A617BB5E-1D25-45AB-95FD-0D492FD7A37C" label="Source" paletteLabel="Source" tag="-1" image="scroll.fill" catalog="system" bordered="YES" id="GVF-n3-E1R">
                                     <size key="minSize" width="29" height="25"/>
                                     <size key="maxSize" width="29" height="25"/>
+                                    <connections>
+                                        <action selector="toggleSourceView:" target="jGA-0Y-lOj" id="2ex-zz-xv3"/>
+                                    </connections>
                                 </toolbarItem>
                                 <toolbarItem implicitItemIdentifier="192BD558-0861-4EC7-A585-953A0A97944C" label="Environment" paletteLabel="Environment" tag="-1" image="leaf.fill" catalog="system" bordered="YES" id="nIx-qd-LrC">
                                     <size key="minSize" width="28" height="25"/>
                                     <size key="maxSize" width="28" height="25"/>
+                                    <connections>
+                                        <action selector="toggleEnvView:" target="jGA-0Y-lOj" id="BIQ-ri-3HI"/>
+                                    </connections>
                                 </toolbarItem>
-                                <toolbarItem implicitItemIdentifier="CD1F7BD9-E277-4B61-8DD9-756CBA69B94F" label="Document" paletteLabel="Document" tag="-1" image="doc.richtext" catalog="system" bordered="YES" id="QbR-VJ-i5G">
+                                <toolbarItem implicitItemIdentifier="CD1F7BD9-E277-4B61-8DD9-756CBA69B94F" label="Document" paletteLabel="Document" tag="-1" image="doc.richtext.fill" catalog="system" bordered="YES" id="QbR-VJ-i5G">
                                     <size key="minSize" width="26" height="25"/>
                                     <size key="maxSize" width="26" height="25"/>
+                                    <connections>
+                                        <action selector="toggleRenderedView:" target="jGA-0Y-lOj" id="BpK-5a-fZR"/>
+                                    </connections>
                                 </toolbarItem>
                                 <toolbarItem implicitItemIdentifier="NSToolbarSpaceItem" id="rmL-mz-G09"/>
                                 <toolbarItem implicitItemIdentifier="NSToolbarFlexibleSpaceItem" id="aes-MI-ND7"/>
@@ -821,7 +830,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="doc.richtext" catalog="system" width="14" height="16"/>
+        <image name="doc.richtext.fill" catalog="system" width="14" height="16"/>
         <image name="leaf.fill" catalog="system" width="16" height="14"/>
         <image name="scroll.fill" catalog="system" width="17" height="16"/>
     </resources>

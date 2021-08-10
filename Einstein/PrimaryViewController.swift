@@ -44,8 +44,12 @@ class PrimaryViewController: NSSplitViewController {
         return splitViewItems.compactMap({ $0.viewController as? RenderedViewController }).first!
     }
 
+    var environmentViewController: EnvironmentViewController {
+        return splitViewItems.compactMap({ $0.viewController as? EnvironmentViewController }).first!
+    }
+
     override func splitView(_ splitView: NSSplitView, canCollapseSubview subview: NSView) -> Bool {
-        return super.splitView(splitView, canCollapseSubview: subview)
+        return splitViewItems.reduce(into: 0, { $0 = $0 + ($1.isCollapsed ? 0 : 1)}) > 1
     }
 
     override func splitView(_ splitView: NSSplitView, shouldHideDividerAt dividerIndex: Int) -> Bool {
@@ -61,6 +65,49 @@ class PrimaryViewController: NSSplitViewController {
 
     override func splitView(_ splitView: NSSplitView, additionalEffectiveRectOfDividerAt dividerIndex: Int) -> NSRect {
         return super.splitView(splitView, additionalEffectiveRectOfDividerAt: dividerIndex)
+    }
+
+    // MARK: - Actions
+
+    func isVisible(controller: NSViewController) -> Bool {
+        guard let splitItem = splitViewItems.first(where: { $0.viewController == controller }) else { return false }
+        return !splitItem.isCollapsed
+    }
+
+    @discardableResult func toggle(controller: NSViewController) -> Bool {
+        guard let splitItem = splitViewItems.first(where: { $0.viewController == controller }) else { return false }
+        splitItem.isCollapsed = !splitItem.isCollapsed
+        return splitItem.isCollapsed
+    }
+
+    @IBAction func toggleSourceView(_ sender: NSToolbarItem) {
+        guard !isVisible(controller: sourceViewController) || splitView(splitView, canCollapseSubview: sourceViewController.view) else { return }
+        let hidden = toggle(controller: sourceViewController)
+        if hidden {
+            sender.image = NSImage(systemSymbolName: "scroll", accessibilityDescription: nil)
+        } else {
+            sender.image = NSImage(systemSymbolName: "scroll.fill", accessibilityDescription: nil)
+        }
+    }
+
+    @IBAction func toggleEnvView(_ sender: NSToolbarItem) {
+        guard !isVisible(controller: environmentViewController) || splitView(splitView, canCollapseSubview: environmentViewController.view) else { return }
+        let hidden = toggle(controller: environmentViewController)
+        if hidden {
+            sender.image = NSImage(systemSymbolName: "leaf", accessibilityDescription: nil)
+        } else {
+            sender.image = NSImage(systemSymbolName: "leaf.fill", accessibilityDescription: nil)
+        }
+    }
+
+    @IBAction func toggleRenderedView(_ sender: NSToolbarItem) {
+        guard !isVisible(controller: renderedViewController) || splitView(splitView, canCollapseSubview: renderedViewController.view) else { return }
+        let hidden = toggle(controller: renderedViewController)
+        if hidden {
+            sender.image = NSImage(systemSymbolName: "doc.richtext", accessibilityDescription: nil)
+        } else {
+            sender.image = NSImage(systemSymbolName: "doc.richtext.fill", accessibilityDescription: nil)
+        }
     }
 }
 
