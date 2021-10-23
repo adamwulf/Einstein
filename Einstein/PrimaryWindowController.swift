@@ -22,7 +22,6 @@ class PrimaryWindowController: NSWindowController, NSWindowDelegate {
         shouldCascadeWindows = true
     }
 
-
     // MARK: - Actions
 
     @IBAction func toggleSourceView(_ sender: NSToolbarItem) {

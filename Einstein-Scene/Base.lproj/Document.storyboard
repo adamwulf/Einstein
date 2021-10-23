@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="0KW-gN-iCS">
+    <device id="ipad9_7" orientation="portrait" layout="fullscreen" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Source View Controller-->
+        <scene sceneID="T3S-q8-jRI">
+            <objects>
+                <viewController id="7x7-TA-geF" customClass="SourceViewController" customModule="Einstein_Scene" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bh6-NO-gAb">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yVr-Ls-TUo" customClass="EditorView" customModule="Einstein_Scene" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="70" width="768" height="954"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="U22-DE-AIo"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="yVr-Ls-TUo" firstAttribute="top" secondItem="U22-DE-AIo" secondAttribute="top" id="1op-tN-U7Y"/>
+                            <constraint firstItem="U22-DE-AIo" firstAttribute="bottom" secondItem="yVr-Ls-TUo" secondAttribute="bottom" id="FR6-sU-lVA"/>
+                            <constraint firstItem="U22-DE-AIo" firstAttribute="trailing" secondItem="yVr-Ls-TUo" secondAttribute="trailing" id="UPr-fu-tp1"/>
+                            <constraint firstItem="yVr-Ls-TUo" firstAttribute="leading" secondItem="U22-DE-AIo" secondAttribute="leading" id="tAE-C3-gbP"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="editorView" destination="yVr-Ls-TUo" id="Br4-Mv-nRA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WnW-uD-FE0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-351" y="193"/>
+        </scene>
+        <!--Document View Controller-->
+        <scene sceneID="NpS-g2-k5g">
+            <objects>
+                <splitViewController allowDoubleColumnStyle="YES" id="0KW-gN-iCS" customClass="DocumentViewController" customModule="Einstein_Scene" customModuleProvider="target" sceneMemberID="viewController">
+                    <connections>
+                        <segue destination="7x7-TA-geF" kind="relationship" relationship="detailViewController" id="VRe-MC-8bp"/>
+                    </connections>
+                </splitViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5WF-Qf-J2W" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1110" y="-109"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

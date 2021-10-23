@@ -6,8 +6,8 @@
 //  Copyright © 2021 Milestone Made. All rights reserved.
 //
 
-import AppKit
+import UIKit
 
 class Constants {
-    static let codeFont = NSFont(name: "Courier", size: 14)!
+    static let codeFont = UIFont.monospacedSystemFont(ofSize: 14, weight: .regular)
 }

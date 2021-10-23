@@ -2,11 +2,11 @@
   "object": {
     "pins": [
       {
-        "package": "IosMath",
-        "repositoryURL": "https://github.com/adamwulf/iosMath",
+        "package": "iosMath",
+        "repositoryURL": "https://github.com/adamwulf/iosMath.git",
         "state": {
-          "branch": "feature/spm",
-          "revision": "443520c9e33be3a5c8ab18ff6462e3f2e4af7d30",
+          "branch": "master",
+          "revision": "1ac1fc1392992ff372e474f38b0edae69f7032e3",
           "version": null
         }
       },
@@ -15,7 +15,7 @@
         "repositoryURL": "https://github.com/adamwulf/MMSwiftToolbox",
         "state": {
           "branch": "main",
-          "revision": "9f546153d4db9b8e2d44fe5ba83d8d24c1232cb7",
+          "revision": "bcca4a637e512d41772582ef9e602c6df876a585",
           "version": null
         }
       },
@@ -23,8 +23,8 @@
         "package": "Sourceful",
         "repositoryURL": "https://github.com/adamwulf/Sourceful.git",
         "state": {
-          "branch": "feature/delegates",
-          "revision": "68d9fc1f6f30aa700fec4f47cd09f3c771de0e81",
+          "branch": "main",
+          "revision": "7dec5b43a2afeec126ea940821b6f7c38c410cf4",
           "version": null
         }
       },
@@ -42,8 +42,8 @@
         "repositoryURL": "https://github.com/SwiftyBeaver/SwiftyBeaver.git",
         "state": {
           "branch": null,
-          "revision": "2c513a2e8fbfbd6495afc4a05941d8e3fdba68e9",
-          "version": "1.9.3"
+          "revision": "2c039501d6eeb4d4cd4aec4a8d884ad28862e044",
+          "version": "1.9.5"
         }
       }
     ]
