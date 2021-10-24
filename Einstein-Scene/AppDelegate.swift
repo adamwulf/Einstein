@@ -26,10 +26,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
            let urlStr = userInfo["url"] as? String,
            let url = URL(string: urlStr),
            url.isFileURL {
-            if url.startAccessingSecurityScopedResource() {
-                let data = FileManager.default.contents(atPath: url.path)
-                url.stopAccessingSecurityScopedResource()
-            }
             return UISceneConfiguration(name: "Document Configuration", sessionRole: connectingSceneSession.role)
         } else {
             return UISceneConfiguration(name: "Default Configuration", sessionRole: connectingSceneSession.role)

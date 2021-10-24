@@ -9,7 +9,6 @@
 import UIKit
 import SwiftTex
 
-
 protocol SourceViewControllerDelegate: AnyObject {
     func didParse(mathAst: [ExprNode])
 }
@@ -21,7 +20,9 @@ class SourceViewController: UIViewController {
     var content: ContentState? {
         didSet {
             self.navigationItem.title = content?.title
-            editorView.text = content?.text ?? ""
+            if let editorView = editorView {
+                editorView.text = content?.text ?? ""
+            }
         }
     }
 
@@ -29,6 +30,7 @@ class SourceViewController: UIViewController {
         super.viewDidLoad()
 
         editorView.delegate = self
+        editorView.text = content?.text ?? ""
     }
 
     func parse() {

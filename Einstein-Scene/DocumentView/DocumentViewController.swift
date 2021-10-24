@@ -7,11 +7,16 @@
 //
 
 import UIKit
+import SwiftTex
 
-class DocumentViewController: UISplitViewController {
+class DocumentViewController: UIViewController {
 
-    var sourceController: SourceViewController {
-        return viewControllers.compactMap({ $0 as? SourceViewController }).first!
+    var sourceController: SourceViewController? {
+        return children.compactMap({ $0 as? SourceViewController }).first
+    }
+
+    var renderController: RenderViewController? {
+        return children.compactMap({ $0 as? RenderViewController }).first
     }
 
     var content: ContentState?
@@ -22,6 +27,8 @@ class DocumentViewController: UISplitViewController {
         set {
             if let val = newValue {
                 content = ContentState(url: val)
+                renderController?.render(mathAst: [])
+                sourceController?.content = content
             } else {
                 content = nil
             }
@@ -35,7 +42,13 @@ class DocumentViewController: UISplitViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        sourceController?.delegate = self
+        sourceController?.content = content
+    }
+}
 
-        sourceController.content = content
+extension DocumentViewController: SourceViewControllerDelegate {
+    func didParse(mathAst: [ExprNode]) {
+        renderController?.render(mathAst: mathAst)
     }
 }

@@ -48,7 +48,6 @@
 		C5B3F3E52724C64B00D5E73C /* MMSwiftToolbox in Frameworks */ = {isa = PBXBuildFile; productRef = C5B3F3E42724C64B00D5E73C /* MMSwiftToolbox */; };
 		C5B3F3E72724C64B00D5E73C /* SwiftyBeaver in Frameworks */ = {isa = PBXBuildFile; productRef = C5B3F3E62724C64B00D5E73C /* SwiftyBeaver */; };
 		C5B3F3EB2724C64B00D5E73C /* Sourceful in Frameworks */ = {isa = PBXBuildFile; productRef = C5B3F3EA2724C64B00D5E73C /* Sourceful */; };
-		C5B3F3F22724CE2200D5E73C /* iosMath in Frameworks */ = {isa = PBXBuildFile; productRef = C5B3F3F12724CE2200D5E73C /* iosMath */; };
 		C5B3F3F52724CE9B00D5E73C /* EditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B3F3F42724CE9B00D5E73C /* EditorView.swift */; };
 		C5B3F3F72724CEFF00D5E73C /* Logging.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B3F3F62724CEFF00D5E73C /* Logging.swift */; };
 		C5B3F3F82724CF2B00D5E73C /* DarkTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50617822626BF4F0089EC8E /* DarkTheme.swift */; };
@@ -58,6 +57,8 @@
 		C5B3F3FD2724D14C00D5E73C /* SourceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B3F3FC2724D14C00D5E73C /* SourceViewController.swift */; };
 		C5B3F3FE2724F99100D5E73C /* ContentState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C567C362262D374B00CF79B0 /* ContentState.swift */; };
 		C5B3F4002724FD2600D5E73C /* ContentState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B3F3FF2724FD2600D5E73C /* ContentState.swift */; };
+		C5B3F402272502F400D5E73C /* RenderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B3F401272502F400D5E73C /* RenderViewController.swift */; };
+		C5B3F4202725092D00D5E73C /* iosMath in Frameworks */ = {isa = PBXBuildFile; productRef = C5B3F41F2725092D00D5E73C /* iosMath */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -110,6 +111,8 @@
 		C5B3F3F62724CEFF00D5E73C /* Logging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logging.swift; sourceTree = "<group>"; };
 		C5B3F3FC2724D14C00D5E73C /* SourceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceViewController.swift; sourceTree = "<group>"; };
 		C5B3F3FF2724FD2600D5E73C /* ContentState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentState.swift; sourceTree = "<group>"; };
+		C5B3F401272502F400D5E73C /* RenderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenderViewController.swift; sourceTree = "<group>"; };
+		C5B3F4082725066300D5E73C /* libIosMath.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libIosMath.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,10 +140,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C5B3F4202725092D00D5E73C /* iosMath in Frameworks */,
 				C5B3F3EB2724C64B00D5E73C /* Sourceful in Frameworks */,
 				C5B3F3E52724C64B00D5E73C /* MMSwiftToolbox in Frameworks */,
 				C5B3F3E32724C64B00D5E73C /* SwiftTex in Frameworks */,
-				C5B3F3F22724CE2200D5E73C /* iosMath in Frameworks */,
 				C5B3F3E72724C64B00D5E73C /* SwiftyBeaver in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -180,7 +183,7 @@
 				C5B3F3A22724AE6300D5E73C /* Einstein-iOS */,
 				C5B3F3C72724B71600D5E73C /* Einstein-Scene */,
 				C59C97C62626AB20006224D4 /* Products */,
-				C5B3F3BC2724B06900D5E73C /* Frameworks */,
+				C5B3F4072725066300D5E73C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -234,13 +237,6 @@
 			path = "Einstein-iOS";
 			sourceTree = "<group>";
 		};
-		C5B3F3BC2724B06900D5E73C /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		C5B3F3C72724B71600D5E73C /* Einstein-Scene */ = {
 			isa = PBXGroup;
 			children = (
@@ -269,10 +265,19 @@
 				C50617822626BF4F0089EC8E /* DarkTheme.swift */,
 				C50617852626BF690089EC8E /* LightTheme.swift */,
 				C5B3F3E02724BAD100D5E73C /* DocumentViewController.swift */,
+				C5B3F401272502F400D5E73C /* RenderViewController.swift */,
 				C5B3F3FC2724D14C00D5E73C /* SourceViewController.swift */,
 				C5B3F3F42724CE9B00D5E73C /* EditorView.swift */,
 			);
 			path = DocumentView;
+			sourceTree = "<group>";
+		};
+		C5B3F4072725066300D5E73C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C5B3F4082725066300D5E73C /* libIosMath.a */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -340,7 +345,7 @@
 				C5B3F3E42724C64B00D5E73C /* MMSwiftToolbox */,
 				C5B3F3E62724C64B00D5E73C /* SwiftyBeaver */,
 				C5B3F3EA2724C64B00D5E73C /* Sourceful */,
-				C5B3F3F12724CE2200D5E73C /* iosMath */,
+				C5B3F41F2725092D00D5E73C /* iosMath */,
 			);
 			productName = "Einstein-Scene";
 			productReference = C5B3F3C62724B71600D5E73C /* Einstein-Scene.app */;
@@ -381,7 +386,7 @@
 				C50617542626B1E20089EC8E /* XCRemoteSwiftPackageReference "MMSwiftToolbox" */,
 				C50617582626B2560089EC8E /* XCRemoteSwiftPackageReference "SwiftyBeaver" */,
 				C567C35E262D2C3400CF79B0 /* XCRemoteSwiftPackageReference "Sourceful" */,
-				C5B3F3F02724CE2200D5E73C /* XCRemoteSwiftPackageReference "iosMath" */,
+				C5B3F41E2725092D00D5E73C /* XCRemoteSwiftPackageReference "iosMath" */,
 			);
 			productRefGroup = C59C97C62626AB20006224D4 /* Products */;
 			projectDirPath = "";
@@ -469,6 +474,7 @@
 				C5B3F3FB2724CFE800D5E73C /* Constants.swift in Sources */,
 				C5B3F3DC2724BA3F00D5E73C /* DocSceneDelegate.swift in Sources */,
 				C5B3F3FA2724CFA400D5E73C /* TexLexer.swift in Sources */,
+				C5B3F402272502F400D5E73C /* RenderViewController.swift in Sources */,
 				C5B3F3CD2724B71600D5E73C /* StartupViewController.swift in Sources */,
 				C5B3F3FD2724D14C00D5E73C /* SourceViewController.swift in Sources */,
 				C5B3F3F72724CEFF00D5E73C /* Logging.swift in Sources */,
@@ -903,7 +909,7 @@
 				kind = branch;
 			};
 		};
-		C5B3F3F02724CE2200D5E73C /* XCRemoteSwiftPackageReference "iosMath" */ = {
+		C5B3F41E2725092D00D5E73C /* XCRemoteSwiftPackageReference "iosMath" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/adamwulf/iosMath.git";
 			requirement = {
@@ -964,9 +970,9 @@
 			package = C567C35E262D2C3400CF79B0 /* XCRemoteSwiftPackageReference "Sourceful" */;
 			productName = Sourceful;
 		};
-		C5B3F3F12724CE2200D5E73C /* iosMath */ = {
+		C5B3F41F2725092D00D5E73C /* iosMath */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = C5B3F3F02724CE2200D5E73C /* XCRemoteSwiftPackageReference "iosMath" */;
+			package = C5B3F41E2725092D00D5E73C /* XCRemoteSwiftPackageReference "iosMath" */;
 			productName = iosMath;
 		};
 /* End XCSwiftPackageProductDependency section */
