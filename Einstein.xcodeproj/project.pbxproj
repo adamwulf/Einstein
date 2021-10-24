@@ -16,7 +16,6 @@
 		C50617922626C5090089EC8E /* MathEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50617912626C5090089EC8E /* MathEditor.swift */; };
 		C567C356262D271600CF79B0 /* PrimaryWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C567C355262D271600CF79B0 /* PrimaryWindowController.swift */; };
 		C567C360262D2C3400CF79B0 /* Sourceful in Frameworks */ = {isa = PBXBuildFile; productRef = C567C35F262D2C3400CF79B0 /* Sourceful */; };
-		C567C363262D374B00CF79B0 /* ContentState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C567C362262D374B00CF79B0 /* ContentState.swift */; };
 		C58FC8A826C253E40031003A /* EnvironmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C58FC8A726C253E40031003A /* EnvironmentViewController.swift */; };
 		C5935AEC262CF4CE00B31CF6 /* PrimaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5935AEB262CF4CE00B31CF6 /* PrimaryViewController.swift */; };
 		C5935AF0262CF5D700B31CF6 /* RenderedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5935AEF262CF5D700B31CF6 /* RenderedViewController.swift */; };
@@ -57,6 +56,8 @@
 		C5B3F3FA2724CFA400D5E73C /* TexLexer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50617942626C9030089EC8E /* TexLexer.swift */; };
 		C5B3F3FB2724CFE800D5E73C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C506178D2626C0200089EC8E /* Constants.swift */; };
 		C5B3F3FD2724D14C00D5E73C /* SourceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B3F3FC2724D14C00D5E73C /* SourceViewController.swift */; };
+		C5B3F3FE2724F99100D5E73C /* ContentState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C567C362262D374B00CF79B0 /* ContentState.swift */; };
+		C5B3F4002724FD2600D5E73C /* ContentState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B3F3FF2724FD2600D5E73C /* ContentState.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -108,6 +109,7 @@
 		C5B3F3F42724CE9B00D5E73C /* EditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorView.swift; sourceTree = "<group>"; };
 		C5B3F3F62724CEFF00D5E73C /* Logging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logging.swift; sourceTree = "<group>"; };
 		C5B3F3FC2724D14C00D5E73C /* SourceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceViewController.swift; sourceTree = "<group>"; };
+		C5B3F3FF2724FD2600D5E73C /* ContentState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -198,13 +200,13 @@
 				C50617882626BF740089EC8E /* Licenses */,
 				C50617812626BF460089EC8E /* Editor */,
 				C59C97C82626AB20006224D4 /* AppDelegate.swift */,
+				C5B3F3FF2724FD2600D5E73C /* ContentState.swift */,
 				C567C355262D271600CF79B0 /* PrimaryWindowController.swift */,
 				C5935AEB262CF4CE00B31CF6 /* PrimaryViewController.swift */,
 				C59C97CA2626AB20006224D4 /* SourceViewController.swift */,
 				C5935AEF262CF5D700B31CF6 /* RenderedViewController.swift */,
 				C58FC8A726C253E40031003A /* EnvironmentViewController.swift */,
 				C59C97CC2626AB20006224D4 /* Document.swift */,
-				C567C362262D374B00CF79B0 /* ContentState.swift */,
 				C506176D2626B2900089EC8E /* Logging.swift */,
 				C59C97CE2626AB20006224D4 /* Assets.xcassets */,
 				C59C97D02626AB20006224D4 /* Main.storyboard */,
@@ -262,6 +264,7 @@
 		C5B3F3F32724CE6400D5E73C /* DocumentView */ = {
 			isa = PBXGroup;
 			children = (
+				C567C362262D374B00CF79B0 /* ContentState.swift */,
 				C50617942626C9030089EC8E /* TexLexer.swift */,
 				C50617822626BF4F0089EC8E /* DarkTheme.swift */,
 				C50617852626BF690089EC8E /* LightTheme.swift */,
@@ -431,10 +434,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C567C363262D374B00CF79B0 /* ContentState.swift in Sources */,
 				C59C97CB2626AB20006224D4 /* SourceViewController.swift in Sources */,
 				C5935AEC262CF4CE00B31CF6 /* PrimaryViewController.swift in Sources */,
 				C567C356262D271600CF79B0 /* PrimaryWindowController.swift in Sources */,
+				C5B3F4002724FD2600D5E73C /* ContentState.swift in Sources */,
 				C59C97C92626AB20006224D4 /* AppDelegate.swift in Sources */,
 				C59C97CD2626AB20006224D4 /* Document.swift in Sources */,
 				C58FC8A826C253E40031003A /* EnvironmentViewController.swift in Sources */,
@@ -462,6 +465,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C5B3F3E12724BAD100D5E73C /* DocumentViewController.swift in Sources */,
+				C5B3F3FE2724F99100D5E73C /* ContentState.swift in Sources */,
 				C5B3F3FB2724CFE800D5E73C /* Constants.swift in Sources */,
 				C5B3F3DC2724BA3F00D5E73C /* DocSceneDelegate.swift in Sources */,
 				C5B3F3FA2724CFA400D5E73C /* TexLexer.swift in Sources */,

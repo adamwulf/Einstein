@@ -14,7 +14,20 @@ class DocumentViewController: UISplitViewController {
         return viewControllers.compactMap({ $0 as? SourceViewController }).first!
     }
 
-    var file: URL?
+    var content: ContentState?
+    var file: URL? {
+        get {
+            return content?.url
+        }
+        set {
+            if let val = newValue {
+                content = ContentState(url: val)
+            } else {
+                content = nil
+            }
+        }
+    }
+
     var sceneDelegate: SceneDelegate {
         return view.window!.windowScene!.delegate as! SceneDelegate
     }
@@ -23,18 +36,6 @@ class DocumentViewController: UISplitViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
 
-        if let file = file,
-           file.startAccessingSecurityScopedResource() {
-            guard let data = FileManager.default.contents(atPath: file.path) else { return }
-            file.stopAccessingSecurityScopedResource()
-
-            guard let str = String(data: data, encoding: .utf8) else { return }
-
-            sourceController.editorView.text = str
-        }
-    }
-
-    @IBAction func didTapButton() {
-        print("foo")
+        sourceController.content = content
     }
 }
