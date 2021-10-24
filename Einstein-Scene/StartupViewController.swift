@@ -21,7 +21,7 @@ class StartupViewController: UIViewController {
     }
 
     @IBAction func didTapButton() {
-        let foo = UIDocumentPickerViewController(documentTypes: ["public.plain-text"], in: .open)
+        let foo = UIDocumentPickerViewController(documentTypes: ["com.milestonemade.einstein"], in: .open)
         foo.delegate = self
         foo.allowsMultipleSelection = false
         present(foo, animated: true, completion: nil)
