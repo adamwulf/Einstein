@@ -7,8 +7,7 @@
 //
 
 import Foundation
-import SwiftTex
-import IosMath
+import AppKit
 
 class EnvironmentViewController: NSViewController {
 }

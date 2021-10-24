@@ -24,7 +24,7 @@ class ContentState: NSCoding {
         else { return nil }
         self.url = url
         if let data = FileManager.default.contents(atPath: url.path),
-           let txt = String(data: data, encoding: .utf8) {
+           let txt = String(data: data, encoding: .utf16) {
             self.text = txt
         } else {
             self.text = ""
@@ -38,7 +38,7 @@ class ContentState: NSCoding {
 
     init(data: Data) {
         if data.count > 0 {
-            text = String(data: data, encoding: .utf8) ?? ""
+            text = String(data: data, encoding: .utf16) ?? ""
         } else {
             text = ""
         }
@@ -51,7 +51,7 @@ class ContentState: NSCoding {
     // MARK: - NSCoding
 
     func data() -> Data {
-        return text.data(using: .utf8) ?? Data()
+        return text.data(using: .utf16) ?? Data()
     }
 
     func encode(with coder: NSCoder) {

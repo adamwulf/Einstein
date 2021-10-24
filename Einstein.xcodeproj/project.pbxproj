@@ -24,6 +24,11 @@
 		C59C97CD2626AB20006224D4 /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59C97CC2626AB20006224D4 /* Document.swift */; };
 		C59C97CF2626AB20006224D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C59C97CE2626AB20006224D4 /* Assets.xcassets */; };
 		C59C97D22626AB20006224D4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C59C97D02626AB20006224D4 /* Main.storyboard */; };
+		C5A2E93127252CCF004C8964 /* iosMath in Frameworks */ = {isa = PBXBuildFile; productRef = C5A2E93027252CCF004C8964 /* iosMath */; };
+		C5A2E93527252D01004C8964 /* DarkTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A2E93327252D00004C8964 /* DarkTheme.swift */; };
+		C5A2E93627252D01004C8964 /* TexLexer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A2E93227252D00004C8964 /* TexLexer.swift */; };
+		C5A2E93727252D01004C8964 /* LightTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A2E93427252D00004C8964 /* LightTheme.swift */; };
+		C5A2E93927252D0F004C8964 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A2E93827252D0F004C8964 /* Constants.swift */; };
 		C5B3F3A42724AE6300D5E73C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B3F3A32724AE6300D5E73C /* AppDelegate.swift */; };
 		C5B3F3A62724AE6300D5E73C /* DocumentBrowserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B3F3A52724AE6300D5E73C /* DocumentBrowserViewController.swift */; };
 		C5B3F3A82724AE6300D5E73C /* DocumentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B3F3A72724AE6300D5E73C /* DocumentViewController.swift */; };
@@ -83,6 +88,10 @@
 		C59C97D12626AB20006224D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C59C97D32626AB20006224D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C59C97D42626AB20006224D4 /* Einstein.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Einstein.entitlements; sourceTree = "<group>"; };
+		C5A2E93227252D00004C8964 /* TexLexer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TexLexer.swift; sourceTree = "<group>"; };
+		C5A2E93327252D00004C8964 /* DarkTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarkTheme.swift; sourceTree = "<group>"; };
+		C5A2E93427252D00004C8964 /* LightTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightTheme.swift; sourceTree = "<group>"; };
+		C5A2E93827252D0F004C8964 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		C5B3F3A12724AE6300D5E73C /* Einstein-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Einstein-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5B3F3A32724AE6300D5E73C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C5B3F3A52724AE6300D5E73C /* DocumentBrowserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentBrowserViewController.swift; sourceTree = "<group>"; };
@@ -123,6 +132,7 @@
 				C567C360262D2C3400CF79B0 /* Sourceful in Frameworks */,
 				C50617562626B1E20089EC8E /* MMSwiftToolbox in Frameworks */,
 				C506174D2626B0190089EC8E /* SwiftTex in Frameworks */,
+				C5A2E93127252CCF004C8964 /* iosMath in Frameworks */,
 				C506175A2626B2560089EC8E /* SwiftyBeaver in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -154,6 +164,9 @@
 		C50617812626BF460089EC8E /* Editor */ = {
 			isa = PBXGroup;
 			children = (
+				C5A2E93227252D00004C8964 /* TexLexer.swift */,
+				C5A2E93327252D00004C8964 /* DarkTheme.swift */,
+				C5A2E93427252D00004C8964 /* LightTheme.swift */,
 				C50617912626C5090089EC8E /* MathEditor.swift */,
 			);
 			path = Editor;
@@ -210,6 +223,7 @@
 				C5935AEF262CF5D700B31CF6 /* RenderedViewController.swift */,
 				C58FC8A726C253E40031003A /* EnvironmentViewController.swift */,
 				C59C97CC2626AB20006224D4 /* Document.swift */,
+				C5A2E93827252D0F004C8964 /* Constants.swift */,
 				C506176D2626B2900089EC8E /* Logging.swift */,
 				C59C97CE2626AB20006224D4 /* Assets.xcassets */,
 				C59C97D02626AB20006224D4 /* Main.storyboard */,
@@ -301,6 +315,7 @@
 				C50617552626B1E20089EC8E /* MMSwiftToolbox */,
 				C50617592626B2560089EC8E /* SwiftyBeaver */,
 				C567C35F262D2C3400CF79B0 /* Sourceful */,
+				C5A2E93027252CCF004C8964 /* iosMath */,
 			);
 			productName = Einstein;
 			productReference = C59C97C52626AB20006224D4 /* Einstein.app */;
@@ -443,11 +458,15 @@
 				C5935AEC262CF4CE00B31CF6 /* PrimaryViewController.swift in Sources */,
 				C567C356262D271600CF79B0 /* PrimaryWindowController.swift in Sources */,
 				C5B3F4002724FD2600D5E73C /* ContentState.swift in Sources */,
+				C5A2E93727252D01004C8964 /* LightTheme.swift in Sources */,
 				C59C97C92626AB20006224D4 /* AppDelegate.swift in Sources */,
 				C59C97CD2626AB20006224D4 /* Document.swift in Sources */,
 				C58FC8A826C253E40031003A /* EnvironmentViewController.swift in Sources */,
 				C50617922626C5090089EC8E /* MathEditor.swift in Sources */,
 				C5935AF0262CF5D700B31CF6 /* RenderedViewController.swift in Sources */,
+				C5A2E93527252D01004C8964 /* DarkTheme.swift in Sources */,
+				C5A2E93927252D0F004C8964 /* Constants.swift in Sources */,
+				C5A2E93627252D01004C8964 /* TexLexer.swift in Sources */,
 				C506176E2626B2900089EC8E /* Logging.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -939,6 +958,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = C567C35E262D2C3400CF79B0 /* XCRemoteSwiftPackageReference "Sourceful" */;
 			productName = Sourceful;
+		};
+		C5A2E93027252CCF004C8964 /* iosMath */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C5B3F41E2725092D00D5E73C /* XCRemoteSwiftPackageReference "iosMath" */;
+			productName = iosMath;
 		};
 		C5B3F3BD2724B06900D5E73C /* SwiftyBeaver */ = {
 			isa = XCSwiftPackageProductDependency;

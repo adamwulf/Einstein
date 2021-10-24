@@ -11,7 +11,7 @@ import AppKit
 import Sourceful
 import SwiftTex
 
-protocol MathEditorDelegate: class {
+protocol MathEditorDelegate: AnyObject {
     func didBeginEditing(_ editor: MathEditor)
     func didEditText(_ editor: MathEditor)
 }

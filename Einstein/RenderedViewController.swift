@@ -8,7 +8,7 @@
 
 import Foundation
 import SwiftTex
-import IosMath
+import iosMath
 
 class RenderedViewController: NSViewController {
 

@@ -8,7 +8,7 @@
 import Cocoa
 import Sourceful
 import SwiftTex
-import IosMath
+import iosMath
 
 @objc protocol SourceViewControllerDelegateObjC { }
 

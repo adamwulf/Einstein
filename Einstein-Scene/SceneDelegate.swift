@@ -48,4 +48,16 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // to restore the scene back to its current state.
     }
 
+    func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>) {
+        for context in URLContexts {
+            let activity = NSUserActivity(activityType: "document")
+            activity.requiredUserInfoKeys = Set(["url"])
+            activity.addUserInfoEntries(from: ["url": context.url.absoluteString])
+            activity.needsSave = true
+            UIApplication.shared.requestSceneSessionActivation(nil, userActivity: activity, options: nil) { error in
+                print(error)
+            }
+        }
+    }
+
 }
